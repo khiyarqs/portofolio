@@ -1,0 +1,1621 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #171717;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav {
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    background-color: #ffffff;
+
+    border-bottom: 1px solid #eeeeee;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111111;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-menu a {
+    color: #555555;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #16865b;
+}
+
+
+/* =========================
+   ABOUT ME
+========================= */
+
+#about {
+    min-height: calc(100vh - 80px);
+
+    display: flex;
+    align-items: center;
+
+    padding: 90px 8%;
+
+    background-color: #ffffff;
+}
+
+.about-container {
+    width: 100%;
+    max-width: 1200px;
+
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+
+    align-items: center;
+
+    gap: 80px;
+
+    margin: auto;
+}
+
+
+/* =========================
+   ABOUT TEXT
+========================= */
+
+.small-title {
+    color: #16865b;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+}
+
+.about-text h1 {
+    font-size: clamp(45px, 6vw, 72px);
+
+    line-height: 1.05;
+
+    letter-spacing: -3px;
+
+    color: #111111;
+
+    margin-bottom: 15px;
+}
+
+.about-text h2 {
+    font-size: 24px;
+
+    font-weight: 600;
+
+    color: #16865b;
+
+    margin-bottom: 25px;
+}
+
+.about-text p {
+    color: #666666;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    max-width: 650px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.buttons {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 35px;
+}
+
+.buttons a {
+    text-decoration: none;
+
+    padding: 14px 23px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background-color: #16865b;
+
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #0f6846;
+
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 1px solid #d7d7d7;
+
+    color: #333333;
+
+    background-color: #ffffff;
+}
+
+.btn-secondary:hover {
+    border-color: #16865b;
+
+    color: #16865b;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   PROFILE PHOTO
+========================= */
+
+.about-photo {
+    display: flex;
+
+    justify-content: center;
+
+    position: relative;
+}
+
+.about-photo::before {
+    content: "";
+
+    position: absolute;
+
+    width: 380px;
+    height: 480px;
+
+    background-color: #eaf7f1;
+
+    border-radius: 24px;
+
+    transform: translate(25px, 25px);
+
+    z-index: 0;
+}
+
+.about-photo img {
+    width: 380px;
+    height: 480px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    position: relative;
+
+    z-index: 1;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================
+   OTHER SECTION
+========================= */
+
+section:not(#about) {
+    min-height: 500px;
+
+    padding: 100px 8%;
+
+    border-top: 1px solid #eeeeee;
+
+    background-color: #ffffff;
+}
+
+section:not(#about) h2 {
+    font-size: 45px;
+
+    color: #111111;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+#contact {
+    min-height: 350px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background-color: #ffffff;
+}
+
+.contact-container {
+    width: 100%;
+    max-width: 600px;
+}
+
+.contact-container h2 {
+    font-size: 36px;
+
+    color: #111111;
+
+    margin-bottom: 10px;
+}
+
+.contact-description {
+    color: #888888;
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   CONTACT ICONS
+========================= */
+
+.contact-icons {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 14px;
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #e3e3e3;
+
+    border-radius: 50%;
+
+    background-color: #ffffff;
+
+    text-decoration: none;
+
+    transition: all 0.25s ease;
+}
+
+.contact-icon i {
+    font-size: 17px;
+
+    color: #555555;
+
+    transition: all 0.25s ease;
+}
+
+.contact-icon:hover {
+    border-color: #16865b;
+
+    transform: translateY(-3px);
+}
+
+.contact-icon:hover i {
+    color: #16865b;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .nav-menu {
+        display: none;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+
+        text-align: center;
+    }
+
+    .about-text p {
+        margin: auto;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .about-text h1 {
+        font-size: 45px;
+
+        letter-spacing: -2px;
+    }
+
+    .about-photo img {
+        width: 280px;
+        height: 360px;
+    }
+
+    .about-photo::before {
+        width: 280px;
+        height: 360px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .contact-container h2 {
+        font-size: 30px;
+    }
+
+    .contact-description {
+        font-size: 13px;
+    }
+
+    .contact-icon {
+        width: 38px;
+        height: 38px;
+    }
+
+    .contact-icon i {
+        font-size: 16px;
+    }
+}
+/* =========================
+   PROJECTS
+========================= */
+
+#projects {
+    min-height: auto;
+
+    padding: 110px 8%;
+
+    background-color: #ffffff;
+}
+
+.projects-container {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+
+/* =========================
+   PROJECT HEADER
+========================= */
+
+.projects-header {
+    max-width: 700px;
+
+    margin-bottom: 80px;
+}
+
+.projects-header h2 {
+    font-size: clamp(40px, 5vw, 56px);
+
+    line-height: 1.1;
+
+    letter-spacing: -2px;
+
+    color: #111111;
+
+    margin-bottom: 20px;
+}
+
+.projects-header > p:last-child {
+    color: #777777;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    max-width: 650px;
+}
+
+
+/* =========================
+   PROJECT ITEM
+========================= */
+
+.project-item {
+    display: grid;
+
+    grid-template-columns: 80px 1fr;
+
+    gap: 35px;
+
+    padding: 60px 0;
+
+    border-top: 1px solid #eeeeee;
+}
+
+.project-item:last-child {
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+/* PROJECT NUMBER */
+
+.project-number {
+    font-size: 18px;
+
+    font-weight: 700;
+
+    color: #16865b;
+
+    padding-top: 5px;
+}
+
+
+/* PROJECT CONTENT */
+
+.project-content {
+    width: 100%;
+}
+
+.project-content h3 {
+    font-size: 30px;
+
+    line-height: 1.2;
+
+    color: #111111;
+
+    margin-bottom: 15px;
+}
+
+.project-description {
+    max-width: 800px;
+
+    color: #707070;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   PROJECT TAGS
+========================= */
+
+.project-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 30px;
+}
+
+.project-tags span {
+    padding: 7px 12px;
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 20px;
+
+    color: #555555;
+
+    background-color: #fafafa;
+
+    font-size: 12px;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   PROJECT GALLERY
+========================= */
+
+.project-gallery {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 12px;
+
+    width: 100%;
+}
+
+.project-photo {
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background-color: #f3f3f3;
+}
+
+.project-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.4s ease;
+}
+
+.project-photo:hover img {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   PROJECT RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .project-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    #projects {
+        padding: 80px 6%;
+    }
+
+    .projects-header {
+        margin-bottom: 50px;
+    }
+
+    .project-item {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        padding: 45px 0;
+    }
+
+    .project-number {
+        font-size: 14px;
+    }
+
+    .project-content h3 {
+        font-size: 25px;
+    }
+
+    .project-gallery {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 8px;
+    }
+
+    .project-photo {
+        border-radius: 8px;
+    }
+}
+/* =========================
+   EDUCATION
+========================= */
+
+#education {
+    padding: 100px 8%;
+    background-color: #ffffff;
+}
+
+.education-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* HEADER */
+
+.education-header {
+    margin-bottom: 60px;
+}
+
+.education-header h2 {
+    font-size: clamp(40px, 5vw, 56px);
+    line-height: 1.1;
+    letter-spacing: -2px;
+    color: #111111;
+}
+
+
+/* =========================
+   EDUCATION TIMELINE
+========================= */
+
+.education-list {
+    position: relative;
+
+    max-width: 1000px;
+
+    padding-left: 45px;
+}
+
+
+/* GARIS VERTIKAL */
+
+.education-list::before {
+    content: "";
+
+    position: absolute;
+
+    left: 8px;
+    top: 10px;
+    bottom: 10px;
+
+    width: 2px;
+
+    background-color: #e2e2e2;
+}
+
+
+/* EDUCATION ITEM */
+
+.education-item {
+    position: relative;
+
+    padding-bottom: 45px;
+}
+
+
+/* HILANGKAN PADDING PADA ITEM TERAKHIR */
+
+.education-item:last-child {
+    padding-bottom: 0;
+}
+
+
+/* TITIK TIMELINE */
+
+.education-item::before {
+    content: "";
+
+    position: absolute;
+
+    left: -41px;
+    top: 8px;
+
+    width: 18px;
+    height: 18px;
+
+    background-color: #16865b;
+
+    border: 4px solid #ffffff;
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 0 2px #16865b;
+}
+
+
+/* YEAR */
+
+.education-year {
+    color: #16865b;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+}
+
+
+/* CONTENT */
+
+.education-content h3 {
+    color: #111111;
+
+    font-size: 25px;
+
+    line-height: 1.3;
+
+    margin-bottom: 8px;
+}
+
+.education-school {
+    color: #16865b;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    margin-bottom: 12px;
+}
+
+.education-description {
+    color: #777777;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    max-width: 800px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    #education {
+        padding: 80px 6%;
+    }
+
+    .education-header {
+        margin-bottom: 45px;
+    }
+
+    .education-list {
+        padding-left: 35px;
+    }
+
+    .education-item {
+        padding-bottom: 40px;
+    }
+
+    .education-item::before {
+        left: -31px;
+
+        width: 16px;
+        height: 16px;
+    }
+
+    .education-content h3 {
+        font-size: 21px;
+    }
+
+}
+/* =========================
+   EXPERIENCE
+========================= */
+
+#experience {
+    min-height: auto;
+
+    padding: 110px 8%;
+
+    background-color: #ffffff;
+}
+
+
+.experience-container {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+
+/* =========================
+   EXPERIENCE HEADER
+========================= */
+
+.experience-header {
+    margin-bottom: 70px;
+}
+
+
+.experience-header h2 {
+    font-size: clamp(40px, 5vw, 56px);
+
+    line-height: 1.1;
+
+    letter-spacing: -2px;
+
+    color: #111111;
+}
+
+
+/* =========================
+   EXPERIENCE CATEGORY
+========================= */
+
+.experience-category {
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #16865b;
+
+    margin-bottom: 20px;
+
+    margin-top: 50px;
+}
+
+
+.experience-category:first-of-type {
+    margin-top: 0;
+}
+
+
+/* =========================
+   EXPERIENCE ITEM
+========================= */
+
+.experience-item {
+    display: grid;
+
+    grid-template-columns: 80px minmax(0, 1fr) 300px;
+
+    gap: 35px;
+
+    align-items: center;
+
+    padding: 35px 0 50px;
+
+    border-top: 1px solid #eeeeee;
+}
+
+
+.experience-number {
+    font-size: 18px;
+
+    font-weight: 700;
+
+    color: #16865b;
+
+    padding-top: 5px;
+}
+
+
+/* =========================
+   EXPERIENCE CONTENT
+========================= */
+
+.experience-content h3 {
+    font-size: 30px;
+
+    line-height: 1.2;
+
+    color: #111111;
+
+    margin-bottom: 8px;
+}
+
+
+.experience-role {
+    color: #16865b;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    margin-bottom: 22px;
+}
+
+
+/* =========================
+   EXPERIENCE LIST
+========================= */
+
+.experience-list {
+    padding-left: 20px;
+
+    max-width: 850px;
+}
+
+
+.experience-list li {
+    color: #707070;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   EXPERIENCE RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+    #experience {
+        padding: 80px 6%;
+    }
+
+
+    .experience-header {
+        margin-bottom: 50px;
+    }
+
+
+    .experience-item {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+        padding: 30px 0 40px;
+    }
+
+
+    .experience-number {
+        font-size: 14px;
+    }
+
+
+    .experience-content h3 {
+        font-size: 25px;
+    }
+
+
+    .experience-category {
+        margin-top: 40px;
+    }
+    
+}
+@media (max-width: 900px) {
+
+    .experience-item {
+        grid-template-columns: 60px 1fr;
+    }
+
+
+    .experience-photo {
+        grid-column: 2;
+
+        max-width: 400px;
+
+        margin-top: 10px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .experience-item {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+
+    .experience-photo {
+        grid-column: auto;
+
+        width: 100%;
+
+        height: 220px;
+    }
+
+}
+/* =========================
+   EXPERIENCE PHOTO
+========================= */
+
+.experience-photo {
+    width: 100%;
+
+    height: 230px;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background-color: #f3f3f3;
+}
+
+
+.experience-photo img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.4s ease;
+}
+
+
+.experience-photo:hover img {
+    transform: scale(1.05);
+}
+/* =========================
+   EXPERIENCE GALLERY
+========================= */
+
+.experience-gallery {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-left: 115px;
+
+    margin-top: 10px;
+
+    padding-bottom: 50px;
+}
+
+
+.experience-gallery-photo {
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background-color: #f3f3f3;
+}
+
+
+.experience-gallery-photo img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.4s ease;
+}
+
+
+.experience-gallery-photo:hover img {
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 900px) {
+
+    .experience-gallery {
+        grid-template-columns: repeat(2, 1fr);
+
+        margin-left: 95px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .experience-gallery {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 8px;
+
+        margin-left: 0;
+
+        padding-bottom: 30px;
+    }
+
+}
+/* =========================
+   TOMIO PHOTO GALLERY
+========================= */
+
+.tomio-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+
+    margin-left: 115px;
+    margin-top: -25px;
+
+    padding-bottom: 50px;
+}
+
+.tomio-gallery-item {
+    width: 100%;
+}
+
+.tomio-gallery-photo {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+
+    overflow: hidden;
+    border-radius: 12px;
+
+    background-color: #f3f3f3;
+}
+
+.tomio-gallery-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+
+    transition: transform 0.4s ease;
+}
+
+.tomio-gallery-photo:hover img {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   TOMIO CAPTION
+========================= */
+
+.tomio-caption {
+    text-align: center;
+
+    color: #707070;
+
+    font-size: 14px;
+    line-height: 1.5;
+
+    margin-top: 10px;
+}
+
+
+/* =========================
+   TRIP LEADER CAPTION
+========================= */
+
+.experience-caption {
+    text-align: center;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .tomio-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 95px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .tomio-gallery {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 8px;
+
+        margin-left: 0;
+        margin-top: 0;
+
+        padding-bottom: 30px;
+    }
+
+}
+/* =========================
+   SKILLS
+========================= */
+
+#skills {
+    padding: 110px 8%;
+    background-color: #ffffff;
+}
+
+.skills-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* =========================
+   SKILLS HEADER
+========================= */
+
+.skills-header {
+    margin-bottom: 60px;
+}
+
+.skills-header h2 {
+    font-size: clamp(40px, 5vw, 56px);
+    line-height: 1.1;
+    letter-spacing: -2px;
+    color: #111111;
+}
+
+
+/* =========================
+   SKILLS WRAPPER
+========================= */
+
+.skills-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================
+   SKILL BOX
+========================= */
+
+.skills-box {
+    border: 1px solid #eeeeee;
+
+    border-radius: 15px;
+
+    padding: 35px;
+
+    background-color: #ffffff;
+
+    transition: all 0.3s ease;
+}
+
+.skills-box:hover {
+    border-color: #16865b;
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================
+   SKILL TITLE
+========================= */
+
+.skills-box h3 {
+    font-size: 25px;
+
+    color: #111111;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   SKILL LIST
+========================= */
+
+.skill-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.skill-list span {
+    display: inline-block;
+
+    padding: 9px 14px;
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 20px;
+
+    background-color: #fafafa;
+
+    color: #555555;
+
+    font-size: 13px;
+
+    transition: all 0.25s ease;
+}
+
+.skill-list span:hover {
+    border-color: #16865b;
+
+    color: #16865b;
+
+    background-color: #eaf7f1;
+}
+
+
+/* =========================
+   SKILLS RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    #skills {
+        padding: 80px 6%;
+    }
+
+    .skills-wrapper {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .skills-box {
+        padding: 30px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .skills-header {
+        margin-bottom: 45px;
+    }
+
+    .skills-box h3 {
+        font-size: 22px;
+    }
+
+    .skill-list {
+        gap: 8px;
+    }
+
+    .skill-list span {
+        font-size: 12px;
+
+        padding: 8px 12px;
+    }
+
+}
+/* =========================
+   CERTIFICATES
+========================= */
+
+#certificates {
+    padding: 110px 8%;
+    background-color: #ffffff;
+}
+
+.certificates-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* =========================
+   CERTIFICATE HEADER
+========================= */
+
+.certificates-header {
+    margin-bottom: 60px;
+}
+
+.certificates-header h2 {
+    font-size: clamp(40px, 5vw, 56px);
+    line-height: 1.1;
+    letter-spacing: -2px;
+    color: #111111;
+}
+
+
+/* =========================
+   CERTIFICATE GRID
+========================= */
+
+.certificates-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================
+   CERTIFICATE CARD
+========================= */
+
+.certificate-card {
+    border: 1px solid #eeeeee;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    background-color: #ffffff;
+
+    transition: all 0.3s ease;
+}
+
+.certificate-card:hover {
+    border-color: #16865b;
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================
+   CERTIFICATE IMAGE
+========================= */
+
+.certificate-image {
+    width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    overflow: hidden;
+
+    background-color: #f3f3f3;
+}
+
+.certificate-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.4s ease;
+}
+
+.certificate-card:hover .certificate-image img {
+    transform: scale(1.04);
+}
+
+
+/* =========================
+   CERTIFICATE CONTENT
+========================= */
+
+.certificate-content {
+    padding: 25px;
+}
+
+.certificate-content h3 {
+    font-size: 20px;
+
+    line-height: 1.3;
+
+    color: #111111;
+
+    margin-bottom: 10px;
+}
+
+.certificate-issuer {
+    color: #16865b;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 6px;
+}
+
+.certificate-year {
+    color: #888888;
+
+    font-size: 13px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   CERTIFICATE BUTTON
+========================= */
+
+.certificate-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    text-decoration: none;
+
+    color: #16865b;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: all 0.25s ease;
+}
+
+.certificate-button:hover {
+    color: #0f6846;
+
+    transform: translateX(3px);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .certificates-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    #certificates {
+        padding: 80px 6%;
+    }
+
+    .certificates-header {
+        margin-bottom: 45px;
+    }
+
+    .certificates-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .certificate-content {
+        padding: 20px;
+    }
+
+}
